@@ -1,4 +1,5 @@
 export const enum Opcodes {
     SEC,
-    CLC
+    CLC,
+    STA
 }
