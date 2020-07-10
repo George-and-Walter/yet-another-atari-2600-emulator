@@ -12,13 +12,15 @@
     "serve:start": "http-server -p 8081 dist",
     "serve:stop": "pgrep http-server | xargs kill",
     "test:e2e": "CI=true npm run build && start-server-and-test serve:start 8081 cypress:run",
-    "test": "jest --config jestconfig.json"
+    "test:units": "jest --config jestconfig.json",
+    "test:all": "npm run test:units && npm run test:e2e"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "cypress": "^4.9.0",
+    "cypress-file-upload": "^4.0.7",
     "http-server": "^0.12.3",
     "jest": "^25.3.0",
     "start-server-and-test": "^1.11.0",
